@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Seletor para o botão
     var botaoMudaCor = document.querySelector(".button-color");
 
-    // Função para gerar uma cor aleatória
-    function gerarCorAleatoria() {
+    // Função para gerar uma cor de fundo aleatória
+    function gerarCorFundoAleatoria() {
         var letrasHex = "0123456789ABCDEF";
         var cor = "#";
         for (var i = 0; i < 6; i++) {
@@ -17,12 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
         return cor;
     }
 
-    // Função para alterar a cor do parágrafo
-    function alterarCorParagrafo() {
-        var novaCor = gerarCorAleatoria();
-        paragrafo.style.color = novaCor;
+    // Função para alterar a cor de fundo do parágrafo
+    function alterarCorFundoParagrafo() {
+        var novaCorFundo = gerarCorFundoAleatoria();
+        paragrafo.style.backgroundColor = novaCorFundo;
     }
 
     // Adiciona um ouvinte de evento ao botão para chamar a função quando clicado
-    botaoMudaCor.addEventListener("click", alterarCorParagrafo);
+    botaoMudaCor.addEventListener("click", alterarCorFundoParagrafo);
 });
